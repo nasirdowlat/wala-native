@@ -25,16 +25,7 @@ const UpcomingStack = createStackNavigator(
 UpcomingStack.navigationOptions = {
   tabBarLabel: 'Upcoming',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${
-              focused ? '' : '-outline'
-            }`
-          : 'md-information-circle'
-      }
-    />
+    <TabBarIcon focused={focused} name="ic_tab_upcoming" />
   ),
 };
 
@@ -50,16 +41,7 @@ const CommunityStack = createStackNavigator(
 CommunityStack.navigationOptions = {
   tabBarLabel: 'Community',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${
-              focused ? '' : '-outline'
-            }`
-          : 'md-information-circle'
-      }
-    />
+    <TabBarIcon focused={focused} name="ic_tab_news" />
   ),
 };
 
@@ -75,16 +57,7 @@ const ExplorerStack = createStackNavigator(
 ExplorerStack.navigationOptions = {
   tabBarLabel: 'Explorer',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${
-              focused ? '' : '-outline'
-            }`
-          : 'md-information-circle'
-      }
-    />
+    <TabBarIcon focused={focused} name="ic_tab_explorer" />
   ),
 };
 
@@ -100,16 +73,7 @@ const ProfileStack = createStackNavigator(
 ProfileStack.navigationOptions = {
   tabBarLabel: 'Profile',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${
-              focused ? '' : '-outline'
-            }`
-          : 'md-information-circle'
-      }
-    />
+    <TabBarIcon focused={focused} name="ic_tab_profile" />
   ),
 };
 
@@ -127,13 +91,7 @@ VirtualChefStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${
-              focused ? '' : '-outline'
-            }`
-          : 'md-information-circle'
-      }
+      name="ic_tab_virtual_chef"
     />
   ),
 };
@@ -142,10 +100,10 @@ VirtualChefStack.path = '';
 
 const tabNavigator = createBottomTabNavigator({
   UpcomingStack,
-  CommunityStack,
   ExplorerStack,
-  ProfileStack,
   VirtualChefStack,
+  CommunityStack,
+  ProfileStack,
 });
 
 tabNavigator.path = '';

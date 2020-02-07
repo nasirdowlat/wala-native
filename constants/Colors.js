@@ -15,6 +15,7 @@ const themeColors = {
 };
 
 export default {
+  ...themeColors,
   tintColor,
   tabIconDefault: '#ccc',
   tabIconSelected: tintColor,
