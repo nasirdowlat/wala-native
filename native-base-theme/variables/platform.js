@@ -141,13 +141,22 @@ export default {
 
   // Color
   brandPrimary:
-    platform === PLATFORM.IOS ? '#007aff' : '#3F51B5',
+    platform === PLATFORM.IOS ? '#0EAD69' : '#3F51B5',
   brandInfo: '#62B1F6',
   brandSuccess: '#5cb85c',
   brandDanger: '#d9534f',
   brandWarning: '#f0ad4e',
-  brandDark: '#000',
-  brandLight: '#f4f4f4',
+  brandOrange: '#FF6238',
+  brandOrangeLight: '#FE9870',
+  brandGreen: '#0EAD69',
+  brandGreenLight: '#4FE7AF',
+  brandVioletBlue: '#6266F9',
+  brandDark: '#1D1E2C',
+  brandGray0: '#7D8699',
+  brandGray1: '#E5E5E5',
+  brandGray2: '#F7F7FB',
+  brandLight: '#FFFFFF',
+  brandRed: '#FF001F',
 
   // Container
   containerBgColor: '#fff',
@@ -184,7 +193,7 @@ export default {
     platform === PLATFORM.IOS ? 'System' : 'montserrat',
   fontSizeBase: 15,
   get fontSizeH1() {
-    return this.fontSizeBase * 1.8;
+    return this.fontSizeBase * 2.8;
   },
   get fontSizeH2() {
     return this.fontSizeBase * 1.6;
@@ -261,7 +270,7 @@ export default {
 
   // Line Height
   buttonLineHeight: 19,
-  lineHeightH1: 32,
+  lineHeightH1: 48,
   lineHeightH2: 27,
   lineHeightH3: 22,
   lineHeight: platform === PLATFORM.IOS ? 20 : 24,

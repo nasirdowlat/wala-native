@@ -28,40 +28,102 @@ export default function GetStartedScreen() {
           }}>
           <Swiper
             style={styles.wrapper}
-            height={100}
             paginationStyle={styles.pagination}
+            dotStyle={{
+              backgroundColor: 'rgba(0,0,0,.2)',
+              width: 8,
+              height: 4,
+              borderRadius: 4,
+              marginLeft: 3,
+              marginRight: 3,
+              marginTop: 3,
+              marginBottom: 3,
+            }}
+            activeDotStyle={{
+              backgroundColor: 'rgba(254.0,152.0,112.0,1)',
+              width: 24,
+              height: 4,
+              borderRadius: 4,
+              marginLeft: 3,
+              marginRight: 3,
+              marginTop: 3,
+              marginBottom: 3,
+            }}
             showsButtons={false}>
             <View style={styles.slide1}>
-              <H1>Fresh</H1>
-              <H1>Ingredients</H1>
+              <H1
+                style={{
+                  fontFamily: 'playfairdisplay-bold',
+                }}>
+                Fresh
+              </H1>
+              <H1
+                style={{
+                  fontFamily: 'playfairdisplay-bold',
+                }}>
+                Ingredients
+              </H1>
               <Text style={styles.text}>
                 Fresh ingredients for tasty, home-cooked
                 dinners.
               </Text>
             </View>
             <View style={styles.slide2}>
-              <H1>Delivery</H1>
-              <H1>Service</H1>
+              <H1
+                style={{
+                  fontFamily: 'playfairdisplay-bold',
+                }}>
+                Delivery
+              </H1>
+              <H1
+                style={{
+                  fontFamily: 'playfairdisplay-bold',
+                }}>
+                Service
+              </H1>
               <Text style={styles.text}>
                 Delivery 7 days a week. Pause or skip
                 anytime.
               </Text>
             </View>
             <View style={styles.slide3}>
-              <H1>Discovery</H1>
-              <H1>Tips</H1>
+              <H1
+                style={{
+                  fontFamily: 'playfairdisplay-bold',
+                }}>
+                Discovery
+              </H1>
+              <H1
+                style={{
+                  fontFamily: 'playfairdisplay-bold',
+                }}>
+                Tips
+              </H1>
               <Text style={styles.text}>
                 Cook perfect meals with professional tips.
               </Text>
             </View>
           </Swiper>
         </View>
-        <Button>
+        <Button
+          style={styles.getStartedButton}
+          full
+          rounded
+          success>
           <Text>Get Started</Text>
         </Button>
         <View style={styles.bottomText}>
-          <Text>Have an Account?</Text>
-          <Text> Log In</Text>
+          <Text style={styles.bottomTextStyle}>
+            Have an Account?
+          </Text>
+          <Text
+            style={{
+              ...styles.bottomTextStyle,
+              color: '#FE9870',
+            }}>
+            {' '}
+            Log In
+          </Text>
         </View>
       </View>
     </>
@@ -83,32 +145,31 @@ const styles = StyleSheet.create({
     height: 184,
   },
   wrapper: {
-    height: 100,
+    height: 174,
   },
   slide1: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#9DD6EB',
   },
   slide2: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#97CAE5',
   },
   slide3: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#92BBD9',
   },
   bottomText: {
     display: 'flex',
     flex: 1,
     flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: 32,
   },
   pagination: {
     bottom: undefined,
     left: 0,
-    top: undefined,
+    top: 194,
     right: 0,
   },
   backgroundImage: {
@@ -117,5 +178,26 @@ const styles = StyleSheet.create({
     flex: 1,
     position: 'absolute',
     bottom: 0,
+  },
+  getStartedButton: {
+    marginTop: 70,
+  },
+  text: {
+    marginTop: 16,
+    textAlign: 'center',
+    fontFamily: 'montserrat',
+    fontSize: 16,
+    color: '#1D1E2C',
+    letterSpacing: 0,
+    textAlign: 'center',
+    lineHeight: 28,
+  },
+  bottomTextStyle: {
+    fontFamily: 'montserrat',
+    fontSize: 14,
+    color: '#1D1E2C',
+    letterSpacing: 0,
+    textAlign: 'center',
+    lineHeight: 28,
   },
 });

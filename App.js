@@ -103,6 +103,7 @@ async function loadResourcesAsync() {
       ...Ionicons.font,
       // We include Fonts we need because we use it in throughout the app.
       playfairdisplay: require('./assets/fonts/playfair-display/PlayfairDisplay-Regular.otf'),
+      'playfairdisplay-bold': require('./assets/fonts/playfair-display/PlayfairDisplay-Bold.otf'),
       montserrat: require('./assets/fonts/montserrat/Montserrat-Regular.otf'),
       'dincondensed-bold': require('./assets/fonts/dincondensed/DINCondensed-Bold.ttf'),
       'wala-icons': require('./assets/fonts/wala/icomoon.ttf'),

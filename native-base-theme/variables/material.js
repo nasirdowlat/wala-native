@@ -150,7 +150,7 @@ export default {
   fontFamily: 'montserrat',
   fontSizeBase: 15,
   get fontSizeH1() {
-    return this.fontSizeBase * 1.8;
+    return this.fontSizeBase * 2.8;
   },
   get fontSizeH2() {
     return this.fontSizeBase * 1.6;
