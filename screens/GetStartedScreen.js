@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ImageBackground,
   View,
@@ -10,11 +10,22 @@ import { Button, Text, H1 } from 'native-base';
 
 import { default as Constants } from '../constants/Layout';
 
+const backgrounds = {
+  splash0: require('../assets/images/splash1.png'),
+  splash1: require('../assets/images/splash2.png'),
+  splash2: require('../assets/images/splash3.png'),
+  splash3: require('../assets/images/splash4.png'),
+  splash4: require('../assets/images/splash5.png'),
+};
+
 export default function GetStartedScreen() {
+  const [backgroundImage, setBackgroundImage] = useState(
+    'splash0'
+  );
   return (
     <>
       <ImageBackground
-        source={require('../assets/images/splash1.png')}
+        source={backgrounds[backgroundImage]}
         imageStyle={{
           resizeMode: 'contain',
         }}
@@ -49,8 +60,11 @@ export default function GetStartedScreen() {
               marginTop: 3,
               marginBottom: 3,
             }}
+            onIndexChanged={index =>
+              setBackgroundImage(`splash${index}`)
+            }
             showsButtons={false}>
-            <View style={styles.slide1}>
+            <View style={styles.slide}>
               <H1
                 style={{
                   fontFamily: 'playfairdisplay-bold',
@@ -68,7 +82,7 @@ export default function GetStartedScreen() {
                 dinners.
               </Text>
             </View>
-            <View style={styles.slide2}>
+            <View style={styles.slide}>
               <H1
                 style={{
                   fontFamily: 'playfairdisplay-bold',
@@ -86,7 +100,7 @@ export default function GetStartedScreen() {
                 anytime.
               </Text>
             </View>
-            <View style={styles.slide3}>
+            <View style={styles.slide}>
               <H1
                 style={{
                   fontFamily: 'playfairdisplay-bold',
@@ -101,6 +115,24 @@ export default function GetStartedScreen() {
               </H1>
               <Text style={styles.text}>
                 Cook perfect meals with professional tips.
+              </Text>
+            </View>
+            <View style={styles.slide}>
+              <H1
+                style={{
+                  fontFamily: 'playfairdisplay-bold',
+                }}>
+                Perfect
+              </H1>
+              <H1
+                style={{
+                  fontFamily: 'playfairdisplay-bold',
+                }}>
+                Meals
+              </H1>
+              <Text style={styles.text}>
+                Tasty home cooked meals, without all the
+                fuss.
               </Text>
             </View>
           </Swiper>
@@ -147,15 +179,7 @@ const styles = StyleSheet.create({
   wrapper: {
     height: 174,
   },
-  slide1: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  slide2: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  slide3: {
+  slide: {
     justifyContent: 'center',
     alignItems: 'center',
   },
