@@ -14,17 +14,11 @@ export default function GetStartedScreen() {
   return (
     <>
       <ImageBackground
-        source={require('../assets/images/getstarted-bg1.png')}
+        source={require('../assets/images/splash1.png')}
         imageStyle={{
           resizeMode: 'contain',
         }}
-        style={{
-          width: Constants.window.width,
-          height: Constants.window.width + 20,
-          flex: 1,
-          position: 'absolute',
-          bottom: 0,
-        }}
+        style={styles.backgroundImage}
       />
       <View style={styles.container}>
         <View style={styles.emptySpace} />
@@ -35,12 +29,7 @@ export default function GetStartedScreen() {
           <Swiper
             style={styles.wrapper}
             height={100}
-            paginationStyle={{
-              bottom: undefined,
-              left: 0,
-              top: undefined,
-              right: 0,
-            }}
+            paginationStyle={styles.pagination}
             showsButtons={false}>
             <View style={styles.slide1}>
               <H1>Fresh</H1>
@@ -70,14 +59,9 @@ export default function GetStartedScreen() {
         <Button>
           <Text>Get Started</Text>
         </Button>
-        <View
-          style={{
-            display: 'flex',
-            flex: 1,
-            flexDirection: 'row',
-          }}>
+        <View style={styles.bottomText}>
           <Text>Have an Account?</Text>
-          <Text style={{ color: 'red' }}> Log In</Text>
+          <Text> Log In</Text>
         </View>
       </View>
     </>
@@ -115,5 +99,23 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#92BBD9',
+  },
+  bottomText: {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'row',
+  },
+  pagination: {
+    bottom: undefined,
+    left: 0,
+    top: undefined,
+    right: 0,
+  },
+  backgroundImage: {
+    width: Constants.window.width,
+    height: Constants.window.width + 30,
+    flex: 1,
+    position: 'absolute',
+    bottom: 0,
   },
 });
