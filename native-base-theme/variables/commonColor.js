@@ -62,7 +62,7 @@ export default {
 
   // Button
   buttonFontFamily:
-    platform === PLATFORM.IOS ? 'System' : 'Roboto_medium',
+    platform === PLATFORM.IOS ? 'System' : 'montserrat',
   buttonDisabledBg: '#b5b5b5',
   buttonPadding: 6,
   get buttonPrimaryBg() {
@@ -138,13 +138,22 @@ export default {
 
   // Color
   brandPrimary:
-    platform === PLATFORM.IOS ? '#007aff' : '#3F51B5',
+    platform === PLATFORM.IOS ? '#0EAD69' : '#3F51B5',
   brandInfo: '#62B1F6',
   brandSuccess: '#5cb85c',
   brandDanger: '#d9534f',
   brandWarning: '#f0ad4e',
-  brandDark: '#000',
-  brandLight: '#f4f4f4',
+  brandOrange: '#FF6238',
+  brandOrangeLight: '#FE9870',
+  brandGreen: '#0EAD69',
+  brandGreenLight: '#4FE7AF',
+  brandVioletBlue: '#6266F9',
+  brandDark: '#1D1E2C',
+  brandGray0: '#7D8699',
+  brandGray1: '#E5E5E5',
+  brandGray2: '#F7F7FB',
+  brandLight: '#FFFFFF',
+  brandRed: '#FF001F',
 
   // Container
   containerBgColor: '#fff',
@@ -159,7 +168,7 @@ export default {
   // Font
   DefaultFontSize: 16,
   fontFamily:
-    platform === PLATFORM.IOS ? 'System' : 'Roboto',
+    platform === PLATFORM.IOS ? 'System' : 'montserrat',
   fontSizeBase: 15,
   get fontSizeH1() {
     return this.fontSizeBase * 1.8;
@@ -308,7 +317,7 @@ export default {
 
   // Title
   titleFontfamily:
-    platform === PLATFORM.IOS ? 'System' : 'Roboto_medium',
+    platform === PLATFORM.IOS ? 'System' : 'montserrat',
   titleFontSize: platform === PLATFORM.IOS ? 17 : 19,
   subTitleFontSize: platform === PLATFORM.IOS ? 11 : 14,
   subtitleColor:

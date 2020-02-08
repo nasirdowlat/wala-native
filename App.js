@@ -91,12 +91,19 @@ async function loadResourcesAsync() {
     Asset.loadAsync([
       // require('./assets/images/robot-dev.png'),
       // require('./assets/images/robot-prod.png'),
+      require('./assets/splash.png'),
+      require('./assets/images/splash1.png'),
+      require('./assets/images/splash2.png'),
+      require('./assets/images/splash3.png'),
+      require('./assets/images/splash4.png'),
+      require('./assets/images/splash5.png'),
     ]),
     Font.loadAsync({
       // This is the font that we are using for our tab bar
       ...Ionicons.font,
       // We include Fonts we need because we use it in throughout the app.
       playfairdisplay: require('./assets/fonts/playfair-display/PlayfairDisplay-Regular.otf'),
+      'playfairdisplay-bold': require('./assets/fonts/playfair-display/PlayfairDisplay-Bold.otf'),
       montserrat: require('./assets/fonts/montserrat/Montserrat-Regular.otf'),
       'dincondensed-bold': require('./assets/fonts/dincondensed/DINCondensed-Bold.ttf'),
       'wala-icons': require('./assets/fonts/wala/icomoon.ttf'),

@@ -1,7 +1,11 @@
 // @flow
 
 import color from 'color';
-import { Platform, Dimensions, PixelRatio } from 'react-native';
+import {
+  Platform,
+  Dimensions,
+  PixelRatio,
+} from 'react-native';
 
 import { PLATFORM } from './commonColor';
 
@@ -52,7 +56,7 @@ export default {
   badgePadding: 0,
 
   // Button
-  buttonFontFamily: 'Roboto',
+  buttonFontFamily: 'montserrat',
   buttonDisabledBg: '#b5b5b5',
   buttonPadding: 6,
   get buttonPrimaryBg() {
@@ -143,10 +147,10 @@ export default {
 
   // Font
   DefaultFontSize: 16,
-  fontFamily: 'Roboto',
+  fontFamily: 'montserrat',
   fontSizeBase: 15,
   get fontSizeH1() {
-    return this.fontSizeBase * 1.8;
+    return this.fontSizeBase * 2.8;
   },
   get fontSizeH2() {
     return this.fontSizeBase * 1.6;
@@ -269,7 +273,7 @@ export default {
   },
 
   // Title
-  titleFontfamily: 'Roboto',
+  titleFontfamily: 'montserrat',
   titleFontSize: 19,
   subTitleFontSize: 14,
   subtitleColor: '#FFF',
@@ -292,13 +296,13 @@ export default {
       topInset: 24,
       leftInset: 0,
       rightInset: 0,
-      bottomInset: 34
+      bottomInset: 34,
     },
     landscape: {
       topInset: 0,
       leftInset: 44,
       rightInset: 44,
-      bottomInset: 21
-    }
-  }
+      bottomInset: 21,
+    },
+  },
 };
