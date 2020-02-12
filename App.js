@@ -92,6 +92,7 @@ async function loadResourcesAsync() {
       // require('./assets/images/robot-dev.png'),
       // require('./assets/images/robot-prod.png'),
       require('./assets/splash.png'),
+      require('./assets/images/logo-compact.svg'),
       require('./assets/images/splash1.png'),
       require('./assets/images/splash2.png'),
       require('./assets/images/splash3.png'),

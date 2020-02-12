@@ -1,0 +1,12 @@
+{
+    "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#ffd900" // change this color!
+  },
+  "editor.codeActionsOnSave": {
+    // For ESLint
+    "source.fixAll.eslint": true,
+    // For TSLint
+    "source.fixAll.tslint": true,
+    "stylelint.autoFixOnSave": true,
+   },
+}

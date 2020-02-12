@@ -8,6 +8,8 @@ import Swiper from 'react-native-swiper';
 
 import { Button, Text, H1 } from 'native-base';
 
+import Background from '../components/layout/Background';
+
 import { default as Constants } from '../constants/Layout';
 
 const backgrounds = {
@@ -19,146 +21,139 @@ const backgrounds = {
 };
 
 export default function GetStartedScreen() {
-  const [backgroundImage, setBackgroundImage] = useState(
-    'splash0'
-  );
   return (
-    <>
-      <ImageBackground
-        source={backgrounds[backgroundImage]}
-        imageStyle={{
-          resizeMode: 'contain',
-        }}
-        style={styles.backgroundImage}
-      />
-      <View style={styles.container}>
-        <View style={styles.emptySpace} />
-        <View
-          style={{
-            flexDirection: 'row',
-          }}>
-          <Swiper
-            style={styles.wrapper}
-            paginationStyle={styles.pagination}
-            dotStyle={{
-              backgroundColor: 'rgba(0,0,0,.2)',
-              width: 8,
-              height: 4,
-              borderRadius: 4,
-              marginLeft: 3,
-              marginRight: 3,
-              marginTop: 3,
-              marginBottom: 3,
-            }}
-            activeDotStyle={{
-              backgroundColor: 'rgba(254.0,152.0,112.0,1)',
-              width: 24,
-              height: 4,
-              borderRadius: 4,
-              marginLeft: 3,
-              marginRight: 3,
-              marginTop: 3,
-              marginBottom: 3,
-            }}
-            onIndexChanged={index =>
-              setBackgroundImage(`splash${index}`)
-            }
-            showsButtons={false}>
-            <View style={styles.slide}>
-              <H1
-                style={{
-                  fontFamily: 'playfairdisplay-bold',
-                }}>
-                Fresh
-              </H1>
-              <H1
-                style={{
-                  fontFamily: 'playfairdisplay-bold',
-                }}>
-                Ingredients
-              </H1>
-              <Text style={styles.text}>
-                Fresh ingredients for tasty, home-cooked
-                dinners.
-              </Text>
-            </View>
-            <View style={styles.slide}>
-              <H1
-                style={{
-                  fontFamily: 'playfairdisplay-bold',
-                }}>
-                Delivery
-              </H1>
-              <H1
-                style={{
-                  fontFamily: 'playfairdisplay-bold',
-                }}>
-                Service
-              </H1>
-              <Text style={styles.text}>
-                Delivery 7 days a week. Pause or skip
-                anytime.
-              </Text>
-            </View>
-            <View style={styles.slide}>
-              <H1
-                style={{
-                  fontFamily: 'playfairdisplay-bold',
-                }}>
-                Discovery
-              </H1>
-              <H1
-                style={{
-                  fontFamily: 'playfairdisplay-bold',
-                }}>
-                Tips
-              </H1>
-              <Text style={styles.text}>
-                Cook perfect meals with professional tips.
-              </Text>
-            </View>
-            <View style={styles.slide}>
-              <H1
-                style={{
-                  fontFamily: 'playfairdisplay-bold',
-                }}>
-                Perfect
-              </H1>
-              <H1
-                style={{
-                  fontFamily: 'playfairdisplay-bold',
-                }}>
-                Meals
-              </H1>
-              <Text style={styles.text}>
-                Tasty home cooked meals, without all the
-                fuss.
-              </Text>
-            </View>
-          </Swiper>
-        </View>
-        <Button
-          style={styles.getStartedButton}
-          full
-          rounded
-          success>
-          <Text>Get Started</Text>
-        </Button>
-        <View style={styles.bottomText}>
-          <Text style={styles.bottomTextStyle}>
-            Have an Account?
-          </Text>
-          <Text
+    <Background>
+      {changeImage => (
+        <>
+          <View style={styles.emptySpace} />
+          <View
             style={{
-              ...styles.bottomTextStyle,
-              color: '#FE9870',
+              flexDirection: 'row',
             }}>
-            {' '}
-            Log In
-          </Text>
-        </View>
-      </View>
-    </>
+            <Swiper
+              style={styles.wrapper}
+              paginationStyle={styles.pagination}
+              dotStyle={{
+                backgroundColor: 'rgba(0,0,0,.2)',
+                width: 8,
+                height: 4,
+                borderRadius: 4,
+                marginLeft: 3,
+                marginRight: 3,
+                marginTop: 3,
+                marginBottom: 3,
+              }}
+              activeDotStyle={{
+                backgroundColor:
+                  'rgba(254.0,152.0,112.0,1)',
+                width: 24,
+                height: 4,
+                borderRadius: 4,
+                marginLeft: 3,
+                marginRight: 3,
+                marginTop: 3,
+                marginBottom: 3,
+              }}
+              onIndexChanged={index =>
+                changeImage(`splash${index}`)
+              }
+              showsButtons={false}>
+              <View style={styles.slide}>
+                <H1
+                  style={{
+                    fontFamily: 'playfairdisplay-bold',
+                  }}>
+                  Fresh
+                </H1>
+                <H1
+                  style={{
+                    fontFamily: 'playfairdisplay-bold',
+                  }}>
+                  Ingredients
+                </H1>
+                <Text style={styles.text}>
+                  Fresh ingredients for tasty, home-cooked
+                  dinners.
+                </Text>
+              </View>
+              <View style={styles.slide}>
+                <H1
+                  style={{
+                    fontFamily: 'playfairdisplay-bold',
+                  }}>
+                  Delivery
+                </H1>
+                <H1
+                  style={{
+                    fontFamily: 'playfairdisplay-bold',
+                  }}>
+                  Service
+                </H1>
+                <Text style={styles.text}>
+                  Delivery 7 days a week. Pause or skip
+                  anytime.
+                </Text>
+              </View>
+              <View style={styles.slide}>
+                <H1
+                  style={{
+                    fontFamily: 'playfairdisplay-bold',
+                  }}>
+                  Discovery
+                </H1>
+                <H1
+                  style={{
+                    fontFamily: 'playfairdisplay-bold',
+                  }}>
+                  Tips
+                </H1>
+                <Text style={styles.text}>
+                  Cook perfect meals with professional tips.
+                </Text>
+              </View>
+              <View style={styles.slide}>
+                <H1
+                  style={{
+                    fontFamily: 'playfairdisplay-bold',
+                  }}>
+                  Perfect
+                </H1>
+                <H1
+                  style={{
+                    fontFamily: 'playfairdisplay-bold',
+                  }}>
+                  Meals
+                </H1>
+                <Text style={styles.text}>
+                  Tasty home cooked meals, without all the
+                  fuss.
+                </Text>
+              </View>
+            </Swiper>
+          </View>
+          <Button
+            style={styles.getStartedButton}
+            full
+            rounded
+            success>
+            <Text>Get Started</Text>
+          </Button>
+          <View style={styles.bottomText}>
+            <Text style={styles.bottomTextStyle}>
+              Have an Account?
+            </Text>
+            <Text
+              style={{
+                ...styles.bottomTextStyle,
+                color: '#FE9870',
+              }}>
+              {' '}
+              Log In
+            </Text>
+          </View>
+        </>
+      )}
+    </Background>
   );
 }
 

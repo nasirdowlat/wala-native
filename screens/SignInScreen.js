@@ -1,14 +1,13 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
+
+import Background from '../components/layout/Background';
 
 export default function SignInScreen() {
   return (
-    <ScrollView style={styles.container}>
-      {/**
-       * Go ahead and delete ExpoSignInView and replace it with your content;
-       * we just wanted to provide you with some helpful SignIn.
-       */}
-    </ScrollView>
+    <Background image="splash1">
+      <Text>hello</Text>
+    </Background>
   );
 }
 

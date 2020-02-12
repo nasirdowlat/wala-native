@@ -7,12 +7,17 @@ import ForgotPasswordScreen from '../screens/ForgotPasswordScreen';
 import GetStartedScreen from '../screens/GetStartedScreen';
 import RecoverPasswordScreen from '../screens/RecoverPasswordScreen';
 
-const AuthStack = createStackNavigator({
-  GetStarted: GetStartedScreen,
-  SignUp: SignUpScreen,
-  SignIn: SignInScreen,
-  ForgotPassword: ForgotPasswordScreen,
-  RecoverPassword: RecoverPasswordScreen,
-});
+const AuthStack = createStackNavigator(
+  {
+    GetStarted: GetStartedScreen,
+    SignUp: SignUpScreen,
+    SignIn: SignInScreen,
+    ForgotPassword: ForgotPasswordScreen,
+    RecoverPassword: RecoverPasswordScreen,
+  },
+  {
+    initialRouteName: 'GetStarted',
+  }
+);
 
 export default AuthStack;
