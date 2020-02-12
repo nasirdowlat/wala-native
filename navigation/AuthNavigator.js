@@ -16,7 +16,7 @@ const AuthStack = createStackNavigator(
     RecoverPassword: RecoverPasswordScreen,
   },
   {
-    initialRouteName: 'GetStarted',
+    initialRouteName: 'SignIn',
   }
 );
 

@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
     paddingRight: 32,
   },
   emptySpace: {
-    height: 184,
+    height: 140,
   },
   wrapper: {
     height: 174,

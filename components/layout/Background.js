@@ -13,6 +13,8 @@ const backgrounds = {
   splash2: require('../../assets/images/splash3.png'),
   splash3: require('../../assets/images/splash4.png'),
   splash4: require('../../assets/images/splash5.png'),
+  splash5: require('../../assets/images/splash6.png'),
+  splash6: require('../../assets/images/splash7.png'),
 };
 
 export default function Background({ children, image }) {
